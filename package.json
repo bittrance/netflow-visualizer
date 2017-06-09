@@ -1,0 +1,25 @@
+{
+  "name": "verkehr-visualizer",
+  "description": "...",
+  "author": "Bittrance",
+  "version": "1.0.0",
+  "main": "./lib/main.js",
+  "preferGlobal": false,
+  "repository": "git://github.com/burtcorp/verkehr-visualizer.git",
+  "homepage": "https://github.com/burtcorp/verkehr-visualizer",
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "chai": "^4.0.0",
+    "mocha": "^3.4.2"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.62.0",
+    "bluebird": "^3.5.0",
+    "ipaddr.js": "git+https://github.com/bittrance/ipaddr.js#dual-ipv4-ipv6-subnetmatch"
+  }
+}
