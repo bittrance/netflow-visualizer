@@ -18,7 +18,7 @@ describe('#classifier', function() {
   beforeEach(function() {
     var LSMock = function() {}
     LSMock.prototype.lookup = function(ip_str) { return ['eu-west-1a', 'mock']; }
-    this.labeller = classification.labeller_factory(new LSMock());
+    this.labeller = classification.labellerFactory(new LSMock());
     this.entry = JSON.parse(JSON.stringify(entry));
   });
 
