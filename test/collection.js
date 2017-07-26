@@ -137,4 +137,13 @@ describe('Collector', function() {
     this.collector.ingest(make_event(EMIT_INTERVAL * 10 + 1));
     expect(this.emitted.length).to.equal(0);
   });
+
+  it('allows dumping its ongoing aggregations', function() {
+    this.collector.ingest(make_event());
+    this.collector.ingest(make_another_event());
+    const aggregates = this.collector.dump();
+    expect(aggregates.length).to.equal(2);
+    expect(aggregates[0]).to.include({'key': 'src/dst'});
+    expect(aggregates[1]).to.include({'key': 'other_src/dst'});
+  });
 });
